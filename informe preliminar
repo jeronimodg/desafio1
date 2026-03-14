@@ -1,0 +1,27 @@
+Informe preliminar desafío 1 
+
+Integrantes: Jeronimo Duque Garces 		Cc.1107977669 
+
+             Juan Nicolas Rubiano Barreiro 	Cc.1077228196 
+
+ 
+
+Objetivos:  
+
+Diseñar un programa que solucione de manera eficaz la solicitud que se nos hizo, que, en este caso, sería una versión simplificada de un tetris. 
+
+Madurar la lógica para solucionar problemas de manera eficaz y en la medida de lo posible, eficiente. 
+
+Aplicar de manera correcta y eficiente los operadores bitwise. 
+
+ 
+
+Lógica planteada para la solución 
+
+Lo primero que hemos considerado, es verificar que el tamaño que ingrese el usuario sea adecuado. Después de la verificación, se va a crear una matriz del tamaño que se ingresó y será esa matriz la que se va a estar imprimiendo constantemente en la pantalla. 
+
+Para el tipo de dato de la estructura que vamos a usar, consideramos usar datos booleanos, ya que estos, al solo tener la posibilidad de ser falso o verdadero y tener un bajo consumo de memoria, lo consideramos util para este caso. 
+
+Constantemente, el programa hará uso de varias funciones tales como: funciones encargadas del movimiento y rotación de la pieza, verificación de que el movimiento ingresado sea válido, creación de las piezas, generación de las piezas en el tablero, verificación de colisiones tanto laterales con fronteras y piezas distintas y colisión con el suelo, posibilidad de crear una nueva pieza en el tablero. 
+
+Para la mayoría de las funciones, se van a usar máscaras junto el uso de operadores bitwise, ya sea para las rotaciones y movimientos de las piezas como la “eliminación” de las filas llenas, que no será más que comparar la fila con cero y subirla. 
