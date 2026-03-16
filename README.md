@@ -14,6 +14,25 @@ void imprimir(bool **matriz, unsigned short int alt, unsigned short int anch){
         cout << "|" << endl;
     }
 }
+void borrar_fila(bool ***matriz, unsigned short int primer, unsigned short int alto, unsigned short int ancho){
+    unsigned short int cero=0;
+    for(unsigned short int j=0;j<ancho;j++){
+        (*matriz)[primer][j]&cero;
+    }
+    for(unsigned short int u=primer;u>0;u--){
+        for(unsigned short int k=0;k<ancho;k++){
+            (*matriz)[u-1][k] = ~(*matriz)[u][k];
+        }
+    }
+}
+bool filallena(bool **matriz, unsigned short int fila, unsigned short int ancho){
+    for(unsigned short int j=0;j<ancho;j++){
+        if(matriz[fila][j]==false){
+            return false;
+        }
+    }
+    return true;
+}
 int  main(){
     unsigned short int ancho, alto;
     //unsigned short int prueba[4][2]={{5,6},{4,5},{3,4},{2,3}};
